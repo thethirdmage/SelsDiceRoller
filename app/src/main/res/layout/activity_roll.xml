@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.selsapps.selsdiceroller.RollActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:gravity="center"
+                android:text="@string/defaultDiceDisp"
+                android:textSize="48sp"
+                android:layout_margin="8dp"
+                android:id="@+id/diceField" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:gravity="center"
+                android:text="@string/defaultResultDisp"
+                android:textSize="48sp"
+                android:layout_margin="8dp"
+                android:id="@+id/resultField" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numOfDice"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:textSize="24sp"
+                        android:text="@string/minus"
+                        android:onClick="decrementDice"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defaultDice"
+                        android:textSize="24sp"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:id="@+id/diceNumber"
+                        android:padding="8dp"/>
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:textSize="24sp"
+                        android:text="@string/plus"
+                        android:onClick="incrementDice"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mod"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/modHint"
+                    android:inputType="numberSigned"
+                    android:id="@+id/modField"
+                    android:onClick="displayModifier"
+                    android:imeOptions="actionDone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/d2"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:id="@+id/rollD2"
+                    android:onClick="rollD2"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d4"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD4"
+                    android:onClick="rollD4"
+                    tools:ignore="ButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d6"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD6"
+                    android:onClick="rollD6"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d8"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD8"
+                    android:onClick="rollD8"
+                    tools:ignore="ButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d10"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD10"
+                    android:onClick="rollD10"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d12"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD12"
+                    android:onClick="rollD12"
+                    tools:ignore="ButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d20"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD20"
+                    android:onClick="rollD20"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/d100"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollD100"
+                    android:onClick="rollD100"
+                    tools:ignore="ButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/dF"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rollDF"
+                    android:onClick="rollFate"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/reset"
+                    android:textSize="24sp"
+                    android:textAllCaps="true"
+                    android:layout_height="match_parent"
+                    android:id="@+id/reset"
+                    android:onClick="reset"
+                    tools:ignore="ButtonStyle" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom|center"
+        android:text="@string/roll"
+        android:textSize="24sp"
+        android:onClick="rollDice"/>
+
+</LinearLayout>
