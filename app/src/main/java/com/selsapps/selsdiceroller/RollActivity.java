@@ -1,8 +1,6 @@
 package com.selsapps.selsdiceroller;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -25,57 +23,42 @@ public class RollActivity extends AppCompatActivity {
     }
 
     // Dice roll function
-    public void rollD2 (View view) {
-        dieSides = 2;
+    public void changeSides (View view) {
         isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
 
-    public void rollD4 (View view) {
-        dieSides = 4;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD6 (View view) {
-        dieSides = 6;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD8 (View view) {
-        dieSides = 8;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD10 (View view) {
-        dieSides = 10;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD12 (View view) {
-        dieSides = 12;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD20 (View view) {
-        dieSides = 20;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollD100 (View view) {
-        dieSides = 100;
-        isFate = false;
-        displayDieToRoll(numberOfDice, modifier, dieSides);
-    }
-
-    public void rollFate (View view) {
-        dieSides = 3;
-        isFate = true;
+        switch (view.getId()){
+            case R.id.rollD2:
+                dieSides = 2;
+                break;
+            case R.id.rollD4:
+                dieSides = 4;
+                break;
+            case R.id.rollD6:
+                dieSides = 6;
+                break;
+            case R.id.rollD8:
+                dieSides = 8;
+                break;
+            case R.id.rollD10:
+                dieSides = 10;
+                break;
+            case R.id.rollD12:
+                dieSides = 12;
+                break;
+            case R.id.rollD20:
+                dieSides = 20;
+                break;
+            case R.id.rollD100:
+                dieSides = 100;
+                break;
+            case R.id.rollDF:
+                dieSides = 3;
+                isFate = true;
+                break;
+            default:
+                dieSides = 20;
+                break;
+        }
         displayDieToRoll(numberOfDice, modifier, dieSides);
     }
 
@@ -206,7 +189,7 @@ public class RollActivity extends AppCompatActivity {
         modifier = 0;
         numberOfDice = 1;
         displayNumberOfDice(1);
-        rollD20(view);
+        changeSides(view);
     }
 
 }

@@ -160,7 +160,7 @@
                     android:textSize="24sp"
                     android:textAllCaps="false"
                     android:id="@+id/rollD2"
-                    android:onClick="rollD2"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
                 <Button
@@ -171,7 +171,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD4"
-                    android:onClick="rollD4"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
             </TableRow>
@@ -188,7 +188,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD6"
-                    android:onClick="rollD6"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
                 <Button
@@ -199,7 +199,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD8"
-                    android:onClick="rollD8"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
             </TableRow>
@@ -216,7 +216,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD10"
-                    android:onClick="rollD10"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
                 <Button
@@ -227,7 +227,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD12"
-                    android:onClick="rollD12"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
             </TableRow>
@@ -244,7 +244,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD20"
-                    android:onClick="rollD20"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
                 <Button
@@ -255,7 +255,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollD100"
-                    android:onClick="rollD100"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
             </TableRow>
@@ -272,7 +272,7 @@
                     android:textAllCaps="false"
                     android:layout_height="match_parent"
                     android:id="@+id/rollDF"
-                    android:onClick="rollFate"
+                    android:onClick="changeSides"
                     tools:ignore="ButtonStyle" />
 
                 <Button
