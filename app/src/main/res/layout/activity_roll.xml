@@ -26,7 +26,8 @@
                 android:text="@string/defaultDiceDisp"
                 android:textSize="48sp"
                 android:layout_margin="8dp"
-                android:id="@+id/diceField" />
+                android:id="@+id/diceField"
+                android:textColor="@color/textPrimary"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -37,7 +38,8 @@
                 android:text="@string/defaultResultDisp"
                 android:textSize="48sp"
                 android:layout_margin="8dp"
-                android:id="@+id/resultField" />
+                android:id="@+id/resultField"
+                android:textColor="@color/textPrimary"/>
 
         </LinearLayout>
 
@@ -62,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/numOfDice"
-                    android:textColor="#000000"
+                    android:textColor="@color/textSecondary"
                     android:textSize="18sp"
                     android:textAllCaps="true"
                     android:layout_gravity="center"/>
@@ -85,10 +87,10 @@
                         android:layout_height="wrap_content"
                         android:text="@string/defaultDice"
                         android:textSize="24sp"
-                        android:textColor="#000000"
+                        android:textColor="@color/textPrimary"
                         android:gravity="center"
                         android:id="@+id/diceNumber"
-                        android:padding="8dp"/>
+                        android:padding="8dp" />
 
                     <Button
                         android:layout_width="56dp"
@@ -117,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mod"
-                    android:textColor="#000000"
+                    android:textColor="@color/textSecondary"
                     android:textSize="18sp"
                     android:textAllCaps="true"
                     android:layout_gravity="center"/>

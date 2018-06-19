@@ -8,4 +8,16 @@
         <item name="colorAccent">#7C4DFF</item>
     </style>
 
+    <style name="FeatureStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">88dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
 </resources>

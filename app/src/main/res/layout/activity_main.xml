@@ -11,28 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="@color/textPrimary"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@android:color/darker_gray"/>
+        android:background="@color/divider"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+    <TextView
+        style="@style/FeatureStyle"
         android:text="@string/rollDice"
-        android:textSize="36sp"
         android:id="@+id/pickDice"
-        android:onClick="goToDice"/>
+        android:background="@color/colorAccent" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+    <TextView
+        style="@style/FeatureStyle"
         android:text="@string/rollStats"
-        android:textSize="36sp"
         android:id="@+id/pickStats"
-        android:onClick="goToStats"/>
+        android:background="@color/colorAccent" />
 </LinearLayout>

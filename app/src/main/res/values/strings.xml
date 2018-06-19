@@ -19,7 +19,7 @@
     <string name="numOfDice">Number of dice</string>
     <string name="defaultDiceDisp">1d20</string>
     <string name="defaultResultDisp">0</string>
-    <string name="welcome">Please select a feature below.  More may be added in the future!  Feature requests can be sent to me via Discord or Telegram!</string>
+    <string name="welcome"> (BETA BUILD) \nPlease select a feature below.  More may be added in the future!  Feature requests can be sent to me via Discord or Telegram!</string>
     <string name="rollDice">Roll Dice</string>
     <string name="rollStats">Roll Stats</string>
     <string name="loremIpsum">Lorem ipsum dolor sit amet.</string>
