@@ -1,6 +1,5 @@
 package com.selsapps.selsdiceroller;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,9 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Grab feature TextViews
         TextView rollDice = findViewById(R.id.pickDice);
         TextView rollStats = findViewById(R.id.pickStats);
 
+        //Set click listeners
         rollDice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

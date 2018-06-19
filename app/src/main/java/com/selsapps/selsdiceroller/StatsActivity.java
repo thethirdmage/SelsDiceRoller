@@ -18,6 +18,10 @@ public class StatsActivity extends AppCompatActivity {
         descripView.setText(description);
     }
 
+    /**
+     * Rolls four six-sided dice, returning the sum of the three highest values, six times
+     * @return an int[] of the six stat values
+     */
     public int[] rollDice () {
        int[] results = new int[6];
 
@@ -40,6 +44,11 @@ public class StatsActivity extends AppCompatActivity {
        return results;
     }
 
+    /**
+     * Determines the modifier for a stat roll
+     * @param stat the value of the stat
+     * @return the modifier
+     */
     public String getMod (int stat) {
         String modString = "";
         switch (stat) {
@@ -65,6 +74,10 @@ public class StatsActivity extends AppCompatActivity {
         return modString;
     }
 
+    /**
+     * Generates the stats for a character
+     * @param view
+     */
     public void generateStats (View view) {
         int[] diceResults = rollDice();
         StringBuilder resultString = new StringBuilder();

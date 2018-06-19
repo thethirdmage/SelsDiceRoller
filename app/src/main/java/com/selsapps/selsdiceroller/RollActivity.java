@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class RollActivity extends AppCompatActivity {
 
+    // Set up variables
     int modifier = 0;
     int numberOfDice = 1;
     int dieSides = 20;
@@ -23,6 +24,7 @@ public class RollActivity extends AppCompatActivity {
         setContentView(R.layout.activity_roll);
     }
 
+    // Dice roll function
     public void rollD2 (View view) {
         dieSides = 2;
         isFate = false;
@@ -77,6 +79,7 @@ public class RollActivity extends AppCompatActivity {
         displayDieToRoll(numberOfDice, modifier, dieSides);
     }
 
+    // Increment and decrement number of dice
     public void incrementDice (View view) {
         numberOfDice++;
         displayNumberOfDice(numberOfDice);
@@ -89,12 +92,20 @@ public class RollActivity extends AppCompatActivity {
         displayNumberOfDice(numberOfDice);
     }
 
+    /**
+     * Grabs just the number of dice
+     * @param numOfDice the number of dice to display
+     */
     public void displayNumberOfDice (int numOfDice) {
         TextView diceNum = findViewById(R.id.diceNumber);
         diceNum.setText(String.valueOf(numOfDice));
         displayDieToRoll(numberOfDice, modifier, dieSides);
     }
 
+    /**
+     * Grabs the modifier for the roll
+     * @param view the modifier view
+     */
     public void displayModifier (View view) {
         final EditText modField = findViewById(R.id.modField);
         TextWatcher modWatcher = new TextWatcher() {
@@ -120,6 +131,12 @@ public class RollActivity extends AppCompatActivity {
         modField.addTextChangedListener(modWatcher);
     }
 
+    /**
+     * Displays the die notation for the roll
+     * @param numOfDice the number of dice to roll
+     * @param mod       the modifier to the roll
+     * @param sides     the number of sides per die
+     */
     public void displayDieToRoll (int numOfDice, int mod, int sides){
         TextView dieField = findViewById(R.id.diceField);
         String modChar = "";
@@ -145,6 +162,7 @@ public class RollActivity extends AppCompatActivity {
         int result = 0;
         String resultString;
 
+        // If standard polyhedral dice, e.g., d6, d8, d20
         if(!isFate) {
             for (int i = 0; i < numberOfDice; i++) {
                 result += (int) (Math.random() * dieSides) + 1;
@@ -176,6 +194,10 @@ public class RollActivity extends AppCompatActivity {
         resultField.setText(resultString);
     }
 
+    /**
+     * Resets the dice view
+     * @param view
+     */
     public void reset (View view) {
         EditText modView = findViewById(R.id.modField);
         modView.setText("");
@@ -185,22 +207,6 @@ public class RollActivity extends AppCompatActivity {
         numberOfDice = 1;
         displayNumberOfDice(1);
         rollD20(view);
-    }
-
-    public void easterEgg (View view){
-        AlertDialog.Builder easterEggBuilder = new AlertDialog.Builder(this);
-        easterEggBuilder.setMessage("♥♥♥ Did you know: I love you! ♥♥♥");
-        easterEggBuilder.setCancelable(false);
-
-        easterEggBuilder.setPositiveButton(":D", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-
-        AlertDialog easterEggDialog = easterEggBuilder.create();
-        easterEggDialog.show();
     }
 
 }
