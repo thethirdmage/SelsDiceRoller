@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class StatsActivity extends AppCompatActivity {
 
@@ -17,7 +16,6 @@ public class StatsActivity extends AppCompatActivity {
                 + "This can be used for other games too, but it returns 5e modifiers.";
         TextView descripView = findViewById(R.id.descriptionView);
         descripView.setText(description);
-        Toast.makeText(this, "Press the back button to return to the menu.", Toast.LENGTH_SHORT).show();
     }
 
     public int[] rollDice () {

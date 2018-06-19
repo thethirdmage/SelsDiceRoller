@@ -9,7 +9,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class RollActivity extends AppCompatActivity {
 
@@ -22,7 +21,6 @@ public class RollActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roll);
-        Toast.makeText(this, "Press the back button to return to the menu.", Toast.LENGTH_SHORT).show();
     }
 
     public void rollD2 (View view) {
